@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дашборд МАСТЕР-ОТЧЕТ (ДЕМО)</title>
+    <title>Дашборд МАСТЕР-ОТЧЕТ</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         * {
@@ -309,7 +309,27 @@
     </div>
 
     <script>
-        // Встроенные тестовые данные
+        // Функция загрузки данных из data.json
+        async function loadData() {
+            try {
+                // Добавляем timestamp чтобы избежать кэширования
+                const timestamp = new Date().getTime();
+                const response = await fetch(`data.json?t=${timestamp}`);
+                
+                if (!response.ok) {
+                    throw new Error('Не удалось загрузить данные');
+                }
+                
+                const data = await response.json();
+                initDashboard(data);
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+                // Если не удалось загрузить, показываем ошибку
+                alert('Ошибка загрузки данных. Проверьте наличие файла data.json');
+            }
+        }
+
+        // Тестовые данные (запасной вариант - не используется)
         const testData = {
             "yesterdayFormatted": "31.10.2025",
             "currentMonth": "октябрь",
@@ -601,9 +621,8 @@
             });
         }
 
-        // Инициализация дашборда
-        function initDashboard() {
-            const data = testData;
+        // Инициализация дашборда с данными
+        function initDashboard(data) {
 
             // Статистика за день
             displayRatingBars('dayRatingBars', data.day.ratings, data.day.total);
@@ -619,8 +638,11 @@
             createTrendChart('monthTrendChart', data.dailyData);
         }
 
-        // Загрузка при загрузке страницы
-        window.addEventListener('load', initDashboard);
+        // Загрузка данных при загрузке страницы
+        window.addEventListener('load', loadData);
+
+        // Автоматическое обновление каждые 5 минут
+        setInterval(loadData, 5 * 60 * 1000);
     </script>
 </body>
 </html>
