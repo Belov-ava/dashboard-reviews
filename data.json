@@ -1,0 +1,90 @@
+{
+  "yesterdayFormatted": "31.10.2025",
+  "currentMonth": "октябрь",
+  "day": {
+    "total": 105,
+    "averageRating": 4.6,
+    "ratings": {
+      "1": 5,
+      "2": 4,
+      "3": 9,
+      "4": 12,
+      "5": 75
+    },
+    "auto": 87,
+    "manual": 18,
+    "moderators": {
+      "Екатерина Волкова | Менеджер по работе с клиентами": 18
+    }
+  },
+  "month": {
+    "total": 5683,
+    "averageRating": 4.6,
+    "ratings": {
+      "1": 223,
+      "2": 115,
+      "3": 254,
+      "4": 303,
+      "5": 4788
+    },
+    "auto": 5091,
+    "manual": 592,
+    "moderators": {
+      "Екатерина Волкова | Менеджер по работе с клиентами": 195,
+      "Анастасия | Руководитель отдела отзывов": 15,
+      "Анна Магерко/ менеджер по работе с клиентами": 138
+    }
+  },
+  "dailyData": [
+    {
+      "date": "2025-10-01",
+      "total": 89,
+      "averageRating": 4.5
+    },
+    {
+      "date": "2025-10-02",
+      "total": 95,
+      "averageRating": 4.6
+    },
+    {
+      "date": "2025-10-03",
+      "total": 102,
+      "averageRating": 4.7
+    },
+    {
+      "date": "2025-10-04",
+      "total": 88,
+      "averageRating": 4.5
+    },
+    {
+      "date": "2025-10-05",
+      "total": 110,
+      "averageRating": 4.6
+    },
+    {
+      "date": "2025-10-06",
+      "total": 125,
+      "averageRating": 4.7
+    },
+    {
+      "date": "2025-10-07",
+      "total": 98,
+      "averageRating": 4.5
+    },
+    {
+      "date": "2025-10-08",
+      "total": 115,
+      "averageRating": 4.6
+    },
+    {
+      "date": "2025-10-09",
+      "total": 92,
+      "averageRating": 4.4
+    },
+    {
+      "date": "2025-10-10",
+      "total": 105,
+      "averageRating": 4.6
+    }
+  ]
+}
